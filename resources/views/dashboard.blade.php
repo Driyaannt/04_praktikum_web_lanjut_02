@@ -1,5 +1,18 @@
 @extends('app')
 
+@push('custom_css')
+    <style type="text/css">
+        .alert-custom {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+            border-radius: .25rem;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+@endpush
+
 @section('content')
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -37,5 +50,9 @@
         <!-- /.card -->
 
     </section>
-    <!-- /.content -->
 @endsection
+@push('custom_js')
+    <script>
+        alert('Selamat Datang');
+    </script>
+@endpush

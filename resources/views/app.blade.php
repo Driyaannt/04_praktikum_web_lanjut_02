@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+        <!-- kode lainnya -->
+    @stack('custom_css')
+
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -24,9 +27,13 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
         @yield('content')
     </div>
     <!-- /.content-wrapper -->
+{{--@stack('custom_js')--}}
+
+    @include('footer')
 
     @include('footer')
 
@@ -37,6 +44,7 @@
     <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+@stack('custom_js')
 
 <!-- jQuery -->
 <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -46,5 +54,6 @@
 <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
+
 </body>
 </html>
