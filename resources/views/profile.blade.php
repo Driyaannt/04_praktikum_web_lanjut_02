@@ -29,7 +29,10 @@
                 </div>
             </div>
             <div class="card-body">
-                Hi There! Nama saya Mochamad Driya Ananta saya bersetatus sebagai mahasiswa di pooliteknik negeri malang semester 4
+                @foreach($data as $item)
+                {{$item['profile']}}
+                @endforeach
+<!--                Hi There! Nama saya Mochamad Driya Ananta saya bersetatus sebagai mahasiswa di pooliteknik negeri malang semester 4-->
             </div>
             <!-- /.card-body -->
             <!-- /.card-footer-->

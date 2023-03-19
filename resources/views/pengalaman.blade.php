@@ -29,7 +29,9 @@
                 </div>
             </div>
             <div class="card-body">
-                Pengalaman saya saat kuliah sangat berarti dikarenakan saya dapat belajar dan bertamu banyak teman
+                @foreach($data as $item)
+                {{$item['pengalaman']}}
+                @endforeach
             </div>
             <!-- /.card-body -->
             <!-- /.card-footer-->

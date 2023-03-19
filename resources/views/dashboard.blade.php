@@ -42,7 +42,9 @@
                 </div>
             </div>
             <div class="card-body">
-                Selamat Datang
+                @foreach($data as $item)
+                {{$item['dashboard']}}
+                @endforeach
             </div>
             <!-- /.card-body -->
             <!-- /.card-footer-->
